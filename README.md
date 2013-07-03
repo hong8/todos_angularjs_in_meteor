@@ -7,9 +7,9 @@
   5. open browser to http://localhost:3000
 
 ## Version Info
-  Meteor : v0.6.4
-  AngularJS : v1.0.7
-  M+A Integration : v2.0.0(@https://github.com/lvbreda/Meteor_angularjs.git)
+  1. Meteor : v0.6.4
+  2. AngularJS : v1.0.7
+  3. M+A Integration : v2.0.0(@https://github.com/lvbreda/Meteor_angularjs.git)
 
 ## Deploying
   http://todos_angularjs_in_meteor.meteor.com
