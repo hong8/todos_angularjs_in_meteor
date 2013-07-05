@@ -2,9 +2,9 @@
 app.controller("MeteorCtrl", ["$scope", "$meteor", "$timeout",function($scope, $meteor, $timeout){
 
     $scope.Todos = $meteor("todos");
-    $scope.todos = $meteor("todos").find({});
+    $scope.todos = $scope.Todos.find({});
     $scope.Lists = $meteor("lists");
-    $scope.lists = $meteor("lists").find({});
+    $scope.lists = $scope.Lists.find({});
 
     $scope.currentTags = function(){
         var temp = {};
@@ -47,7 +47,6 @@ app.controller("MeteorCtrl", ["$scope", "$meteor", "$timeout",function($scope, $
             $scope.todos = null;
         }
     })
-
 
     $scope.selectedList = $scope.lists.length > 0 ? $scope.lists[$scope.lists.length-1]._id : "";//$routeParams.id;
     $scope.oldSelectedList = $scope.selectedList;
