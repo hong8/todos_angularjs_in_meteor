@@ -3,6 +3,7 @@
 		<div class="label">
 			Show:
 		</div>
+
 		<div ng-repeat="(tag,value) in computedCurrentTags" class="tag" ng-class="{selected : isFilterTag(tag)}" ng-click="addFilterTag(tag)">
 			{{tag}} <span class="count">({{value}})</span>
 		</div>

@@ -1,14 +1,11 @@
-app = angular.module('meteorapp', ["meteor"]);
+app = angular.module('meteorapp', ['meteor']);
 
-app.config([ "$routeProvider", function( $routeProvider) {
-    $routeProvider.when("/",
-        {
-            templateUrl: "partials/lists.html",
-            controller: "MeteorCtrl"
-        })
+app.config([ '$routeProvider', function( $routeProvider) {
+    $routeProvider.when('/', {
+                                templateUrl: 'partials/lists.html',
+                                controller: 'MeteorCtrl'
+                             })
 //        .otherwise({redirectTo: '/'});
-    Meteor.subscribe('lists');
-    Meteor.subscribe('todos');
 }]);
 
 app.directive('ngEnter', function() {

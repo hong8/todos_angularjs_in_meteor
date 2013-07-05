@@ -1,9 +1,8 @@
-//"Unknown provider: $meteorProvider <- $meteor"
-app.controller("MeteorCtrl", ["$scope", "$meteor", "$timeout",function($scope, $meteor, $timeout){
+app.controller('MeteorCtrl', ['$scope', '$meteor', '$timeout',function($scope, $meteor, $timeout){
 
-    $scope.Todos = $meteor("todos");
+    $scope.Todos = $meteor('todos');
     $scope.todos = $scope.Todos.find({});
-    $scope.Lists = $meteor("lists");
+    $scope.Lists = $meteor('lists');
     $scope.lists = $scope.Lists.find({});
 
     $scope.currentTags = function(){
@@ -48,7 +47,7 @@ app.controller("MeteorCtrl", ["$scope", "$meteor", "$timeout",function($scope, $
         }
     })
 
-    $scope.selectedList = $scope.lists.length > 0 ? $scope.lists[$scope.lists.length-1]._id : "";//$routeParams.id;
+    $scope.selectedList = $scope.lists.length > 0 ? $scope.lists[$scope.lists.length-1]._id : '';//$routeParams.id;
     $scope.oldSelectedList = $scope.selectedList;
 
     $scope.changeList = function(id){
